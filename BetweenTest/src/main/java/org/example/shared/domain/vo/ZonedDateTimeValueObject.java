@@ -16,17 +16,17 @@ public class ZonedDateTimeValueObject implements Serializable {
         this.value = value;
     }
 
-    protected static ZonedDateTime castTimestampToZonedDateTime(Timestamp timestamp) {
+    public static ZonedDateTime castTimestampToZonedDateTime(Timestamp timestamp) {
         LocalDateTime localDateTime = timestamp.toLocalDateTime();
         return localDateTime.atZone(ZoneId.systemDefault());
     }
 
-    protected static Timestamp castZonenddateTimeToTimestap(ZonedDateTime zonedDateTime) {
+    public static Timestamp castZoneDateTimeToTimestap(ZonedDateTime zonedDateTime) {
         Instant instant = zonedDateTime.toInstant();
         return Timestamp.from(instant);
     }
 
-    protected static ZonedDateTime castStringToZonedDateTime(String zonedDateTimeAsString) {
+    public static ZonedDateTime castStringToZonedDateTime(String zonedDateTimeAsString) {
         List<String> date = List.of(zonedDateTimeAsString.split("-"));
         Integer year = Integer.parseInt(date.get(0));
         Integer month = Integer.parseInt(date.get(1));

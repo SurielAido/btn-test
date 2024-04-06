@@ -1,16 +1,22 @@
 package org.example.price.domain.model;
 
-import java.sql.Timestamp;
+import lombok.*;
+import org.example.price.domain.model.vo.*;
 
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
+@EqualsAndHashCode
 public class Price {
 
-    private String id;
-    private Integer brandId;
-    private Timestamp startDate;
-    private Timestamp endDate;
-    private Integer priceList;
-    private Long productId;
-    private Integer priority;
-    private Double finalPrice;
-    private String currency;
+    private PriceId id;
+    private PriceBrandId brandId;
+    private PriceStartDate startDate;
+    private PriceEndDate endDate;
+    private PricePriceList priceList;
+    private PriceProductId productId;
+    private PricePriority priority;
+    private PriceFinalPrice finalPrice;
+    private PriceCurrency currency;
 }
