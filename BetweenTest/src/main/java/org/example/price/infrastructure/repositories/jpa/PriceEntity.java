@@ -33,6 +33,4 @@ public class PriceEntity {
     private Double finalPrice;
     @Column(name = "curr", nullable = false)
     private String currency;
-
-    public static
 }
